@@ -7,10 +7,12 @@ function App() {
 
 
   function handleAddTodo(){
-    const todo = document.getElementById("todo-input").value;
+    if(todo.trim() !== ""){
+      const todo = document.getElementById("todo-input").value;
 
-    setTodos(t => [...t, todo])
-    setTodo("")
+      setTodos(t => [...t, todo])
+      setTodo("")
+    }
   }
 
   function handleTodoChange(e){
